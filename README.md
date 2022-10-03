@@ -1,1 +1,0 @@
-# ICS20-Template
