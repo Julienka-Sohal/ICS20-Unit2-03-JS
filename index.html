@@ -20,40 +20,42 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <title>My first webpage, with JavaScript</title>
+    <title>Circumference math</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">xxx</span>
+          <span class="mdl-layout-title">Circumference calcualtor</span>
         </div>
       </header>
-      <ul class="demo-list-item mdl-list">
-        <li class="mdl-list__item">
-          <span class="mdl-list__item-primary-content">
-            Favicon makes the tab look pretty
-          </span>
-        </li>
-        <li class="mdl-list__item">
-          <span class="mdl-list__item-primary-content">
-            Favicon catches Veiwers attention
-          </span>
-        </li>
-      </ul>
       <main class="mdl-layout__content">
-        <div class="page-content" style="padding-left: 100px">
-          Click the button.
-        </div>
-        <!-- coloured raided button -->
+        <h3>Please enter the radius below:</h3>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Radius</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="radius-for-circle">
+            <label class="mdl-textfield__label" for="radius-for-circle">Radius here ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!--raised button with ripple-->
         <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
-          onclick="myButtonClicked()"
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="enterClicked()"
         >
-          Click Me!
+          Enter
         </button>
-        <img src="./images/book.jpg" alt="book" />
+        <br>
+        <br>
+        <br>
+        <div>
+          <div id="address"></div>
+          <img id="images" src="./images/formula.png" alt="formula">
+        </div>
       </main>
     </div>
   </body>
