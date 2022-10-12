@@ -13,5 +13,6 @@ function enterClicked() {
   const radiusForCircle = document.getElementById("radius-for-circle").value
 
   // output
-  document.getElementById("address").innerHTML = "The circumference of this circle is " + 2 * 3.14 * radiusForCircle + "."
+  document.getElementById("address").innerHTML =
+    "The circumference of this circle is " + 2 * 3.14 * radiusForCircle + "."
 }
