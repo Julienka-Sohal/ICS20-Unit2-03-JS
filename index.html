@@ -18,7 +18,7 @@
       rel="stylesheet"
       href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Address Input, with a JS</title>
   </head>
   <body>
@@ -36,16 +36,25 @@
         <form action="#">
           <p>House Address</p>
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="house-name">
-            <label class="mdl-textfield__label" for="house-name">House name here ...</label>
+            <input class="mdl-textfield__input" type="text" id="house-name" />
+            <label class="mdl-textfield__label" for="house-name"
+              >House name here ...</label
+            >
           </div>
         </form>
         <!-- Numeric Textfield -->
         <form action="#">
           <p>House Number</p>
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="house-number">
-            <label class="mdl-textfield__label" for="house-number">House number here ...</label>
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="house-number"
+            />
+            <label class="mdl-textfield__label" for="house-number"
+              >House number here ...</label
+            >
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
@@ -56,9 +65,9 @@
         >
           Enter
         </button>
-        <br>
-        <br>
-        <br>
+        <br />
+        <br />
+        <br />
         <div id="user-info">
           <div id="address"></div>
         </div>
