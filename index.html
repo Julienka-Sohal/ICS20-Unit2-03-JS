@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<!-- ICS2O-Unit1-05-HTML-MDL -->
-<html lang="en-ca">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="My first webpage, with MDL" />
+    <meta name="description" content="User Input, with JavaScript" />
     <meta name="keywords" content="mths, ics2o" />
-    <meta name="author" content="Julienka Sohal" />
+    <meta name="author" content="Mr. Coxall" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link
       rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+      href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <title>Circumference math</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Address Input, with a JS</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -28,40 +27,40 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Circumference calcualtor</span>
+          <span class="mdl-layout-title">House address Input, with a JS</span>
         </div>
       </header>
       <main class="mdl-layout__content">
-        <h3>Please enter the radius below:</h3>
+        <h3>Please enter the following:</h3>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <p>House Address</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="house-name">
+            <label class="mdl-textfield__label" for="house-name">House name here ...</label>
+          </div>
+        </form>
         <!-- Numeric Textfield -->
         <form action="#">
-          <p>Radius</p>
+          <p>House Number</p>
           <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="radius-for-circle"
-            />
-            <label class="mdl-textfield__label" for="radius-for-circle"
-              >Radius here ...</label
-            >
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="house-number">
+            <label class="mdl-textfield__label" for="house-number">House number here ...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
-        <!--raised button with ripple-->
+        <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="enterClicked()"
         >
           Enter
         </button>
-        <br />
-        <br />
-        <br />
-        <div>
+        <br>
+        <br>
+        <br>
+        <div id="user-info">
           <div id="address"></div>
-          <img id="images" src="./images/formula.png" alt="formula" />
         </div>
       </main>
     </div>

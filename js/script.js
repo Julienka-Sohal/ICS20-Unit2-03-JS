@@ -1,18 +1,18 @@
-// Copyright (c) 2022 Julienka All rights reserved
+// Copyright (c) 2020 Mr. Coxall All rights reserved
 //
-// Created by: Julienka Sohal
-// Created on: Oct 2022
+// Created by: Mr. Coxall
+// Created on: Sep 2020
 // This file contains the JS functions for index.html
 
 /**
- * This function gets users Street name and house number and shows it back to user.
+ * This function gets users first name and age and shows it back to user.
  */
-
 function enterClicked() {
-  //input
-  const radiusForCircle = document.getElementById("radius-for-circle").value
+  // input
+  const houseName = document.getElementById("house-name").value
+  const houseNumber = parseInt(document.getElementById("house-number").value)
 
   // output
   document.getElementById("address").innerHTML =
-    "The circumference of this circle is " + 2 * 3.14 * radiusForCircle + "."
+    "Your info is: " + houseNumber + ", " + houseName + "."
 }
